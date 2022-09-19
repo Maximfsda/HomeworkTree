@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         //Task1
         int years = 24;
         if (years >= 18) {
