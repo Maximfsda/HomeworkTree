@@ -1,54 +1,59 @@
 public class Main {
     public static void main(String[] args) {
         //Task1
-        int years = 24;
-        if (years >= 18) {
-            System.out.println("Сongratulations on your coming of age!");
-        }
-        if (years < 18) {
-            System.out.println("Age of majority not reached!");
+        int years = 2;
+        if (years >= 2 && years <= 6 && years != 1) {
+            System.out.println("Если возраст человека равен " + years + ", то ему нужно ходить в детский сад.");
+        } else {
+            if (years >= 7 && years <= 18) {
+                System.out.println("Если возраст человека равен " + years + ", то ему нужно ходить в школу.");
+            } else {
+                if (years > 18 && years < 24) {
+                    System.out.println("Если возраст человека равен " + years + ", то его место в университете.");
+                } else {
+                    if (years >= 24) {
+                        System.out.println("Если возраст человека равен " + years + ", то ему пора ходить на работу.");
+                    }
+
+                }
+            }
         }
         System.out.println();
         //Task2
+        int Years = 13;
+        if (Years < 5) {
+            System.out.println("Ребенку нельзя кататься ,так как ему лет " + Years + " года.");
+        } else {
+            if (Years >= 5 && Years < 14) {
+                System.out.println("Ребенку можно кататься только в сопровождении взрослого,так как ему " + Years + " лет.");
+            } else {
+                if (Years >= 14) {
+                    System.out.println("Ребенку можно кататься без сопровождении взрослого,так как ему " + Years + " лет.");
+                }
 
-        if (years >= 7) {
-            if (years >= 18) {
-                if (years >= 24) {
-                    System.out.println("The man graduated from the university and it’s time to look for his first job!");
-                }
-                if (years < 24) {
-                    System.out.println("Person has already finished school and can go to university!");
-                }
             }
-            if (years < 18) {
-                System.out.println("Сhild goes to school!");
-            }
-        }
-        if (years < 7) {
-            System.out.println("No Сhild goes to school!");
         }
         System.out.println();
         //Task3
-        int numberPlaces = 102;
-        int numberSeats = 60;
-        int passengersEntered = 190;
+        int one = 5;
+        int two = 3;
+        int free = 3;
+        int max = 0;
+        if (one > two) {
+            max = one;
+            System.out.println("Наибольшее число: " + one);
+        } else {
+            max = two;
+            if (two > free) {
+                System.out.println("Наибольшее число: " + two);
+            } else {
+                max = free;
+                System.out.println("Наибольшее число: " + free);
+            }
+        }
 
-        if (passengersEntered < numberPlaces) {
-            if (passengersEntered < numberSeats) {
-                int c = numberSeats - passengersEntered;
-                int s = numberPlaces - numberSeats;
-                System.out.println("Number of seats available: " + c + ".");
-                System.out.println("Number of available standing seats: " + s + ".");
-            }
-            if (passengersEntered > numberSeats) {
-                int c = numberPlaces - passengersEntered;
-                System.out.println("Number of available standing seats: " + c + ".");
-            }
-        }
-        if (passengersEntered > numberPlaces) {
-            System.out.println("Wagon full!");
-        }
     }
 }
+
 
 
